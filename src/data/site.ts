@@ -194,8 +194,8 @@ export const FEATURES: Feature[] = [
     kicker: "Churrasco",
     title: "Brasa acesa todo dia.",
     text: "Carnes selecionadas, sal grosso e fogo de verdade. Sai da grelha direto para o seu prato.",
-    image: "/images/fotos/grelha-fogo.webp",
-    alt: "Carne sendo assada sobre a brasa",
+    image: "/images/fotos/espeto-fogo.webp",
+    alt: "Espetos de picanha assando sobre o fogo",
     size: "xl",
   },
   {
@@ -203,8 +203,8 @@ export const FEATURES: Feature[] = [
     kicker: "Self-service",
     title: "Um buffet que faz a salada virar prato principal.",
     text: "Saladas frescas, pratos quentes e comida mineira caprichada.",
-    image: "/images/fotos/buffet-saladas.webp",
-    alt: "Cubas de salada fresca no buffet",
+    image: "/images/fotos/buffet-cuba-salada.webp",
+    alt: "Cuba de salada de brócolis, cenoura e ovos de codorna no buffet",
     size: "tall",
   },
   {
@@ -212,8 +212,8 @@ export const FEATURES: Feature[] = [
     kicker: "Cozinha à vista",
     title: "Nada a esconder.",
     text: "Você vê o preparo do balcão. Higiene que os clientes elogiam.",
-    image: "/images/casa/balcao-buffet.webp",
-    alt: "Balcão do buffet da Boi na Brasa com a cozinha ao fundo",
+    image: "/images/fotos/buffet-massa.webp",
+    alt: "Cubas do buffet servidas, com a equipe na cozinha ao fundo",
     size: "sm",
   },
   {
@@ -230,8 +230,8 @@ export const FEATURES: Feature[] = [
     kicker: "Ambiente",
     title: "Salão amplo, climatizado e acessível.",
     text: "Espaço para a família, para o time do trabalho e para a confraternização.",
-    image: "/images/casa/salao-corredor.webp",
-    alt: "Salão da churrascaria com mesas e buffet",
+    image: "/images/casa/salao-mesas.webp",
+    alt: "Salão da churrascaria com mesas postas e telhado de madeira",
     size: "sm",
   },
 ];
@@ -255,8 +255,8 @@ export const MENU: MenuTab[] = [
     label: "Na brasa",
     title: "Direto da grelha",
     text: "Os cortes variam conforme o dia — o que não muda é o ponto certo e o sal grosso na medida.",
-    image: "/images/fotos/carne-fatiada.webp",
-    alt: "Carne assada fatiada sobre tábua",
+    image: "/images/fotos/carne-recheada.webp",
+    alt: "Carne recheada com queijo e presunto saindo da brasa",
     items: [
       { name: "Picanha", note: "O clássico da casa, com a capa de gordura dourada" },
       { name: "Costela", note: "Assada devagar até soltar do osso" },
@@ -272,8 +272,8 @@ export const MENU: MenuTab[] = [
     label: "Self-service",
     title: "Buffet completo",
     text: "Self-service por quilo, com churrasco. Muita variedade para montar o prato do seu jeito.",
-    image: "/images/fotos/buffet-linha.webp",
-    alt: "Linha de buffet com saladas e guarnições",
+    image: "/images/fotos/buffet-frutas.webp",
+    alt: "Buffet de frutas frescas fatiadas sobre folhas verdes",
     items: [
       { name: "Saladas", note: "Folhas, legumes e combinações frescas todos os dias" },
       { name: "Arroz, feijão & tropeiro", note: "O básico mineiro bem feito" },
@@ -289,8 +289,8 @@ export const MENU: MenuTab[] = [
     label: "Marmitas",
     title: "Marmitas & delivery",
     text: "O mesmo almoço do salão, embalado com cuidado e entregue quentinho em Buritis.",
-    image: "/images/fotos/grelha-bifes.webp",
-    alt: "Carnes assando na grelha",
+    image: "/images/fotos/bife-acebolado.webp",
+    alt: "Carne acebolada na assadeira, pronta para a marmita",
     items: [
       { name: "Marmita com churrasco", note: "Carne da brasa + acompanhamentos do dia" },
       { name: "Marmita tradicional", note: "Arroz, feijão, salada e mistura" },
@@ -332,9 +332,9 @@ export const REVIEWS = [
 export const GALLERY = [
   { src: "/images/casa/equipe-sorriso.webp", alt: "Atendente sorrindo no salão", w: 1080, h: 1350, caption: "Atendimento com sorriso" },
   { src: "/images/casa/salao-cliente.webp", alt: "Salão com telhado de madeira e mesas", w: 640, h: 523, caption: "Nosso salão" },
-  { src: "/images/casa/cartaz-churrasco.webp", alt: "Espetos de carne na brasa", w: 1080, h: 1440, caption: "Carnes selecionadas" },
+  { src: "/images/fotos/picanha-sal-grosso.webp", alt: "Picanha com sal grosso indo para a brasa", w: 739, h: 1313, caption: "Carnes selecionadas" },
   { src: "/images/casa/equipe-reconhecimento.webp", alt: "Equipe da Boi na Brasa reunida", w: 1080, h: 703, caption: "Nossa equipe" },
-  { src: "/images/casa/salao-atendente.webp", alt: "Atendente no salão da churrascaria", w: 640, h: 523, caption: "Casa cheia no almoço" },
+  { src: "/images/fotos/feijao-tropeiro.webp", alt: "Feijão tropeiro servido no buffet", w: 900, h: 1600, caption: "Tropeiro todo dia" },
   { src: "/images/casa/familia.webp", alt: "Família reunida na Boi na Brasa", w: 1080, h: 567, caption: "Mesa cheia é mesa feliz" },
 ];
 

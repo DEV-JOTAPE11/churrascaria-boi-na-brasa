@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description,
     locale: "pt_BR",
     type: "website",
-    images: [{ url: "/images/casa/cartaz-churrasco.webp", width: 1080, height: 1440, alt: "Churrascaria Boi na Brasa" }],
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Picanha no espeto sobre a brasa na Churrascaria Boi na Brasa" }],
   },
   alternates: { canonical: "/" },
 };
@@ -49,7 +49,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   name: BRAND.name,
-  image: `${SITE_URL}/images/casa/cartaz-churrasco.webp`,
+  image: `${SITE_URL}/images/og.jpg`,
   servesCuisine: ["Churrasco", "Brasileira", "Mineira"],
   priceRange: "$$",
   telephone: PHONE_E164,
