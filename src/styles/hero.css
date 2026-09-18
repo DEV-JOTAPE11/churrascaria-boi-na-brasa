@@ -120,14 +120,17 @@
 }
 
 .hero__dishFloat {
+  position: relative;
   width: 100%;
   height: 100%;
-  display: grid;
-  place-items: center;
   animation: dishFloat 7s ease-in-out infinite;
 }
 
+/* a foto é contida no quadrado do palco: sem o position o height:100% caía na
+   altura natural da imagem e um prato em pé (o espeto) estourava a tela */
 .hero__dishFloat img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;

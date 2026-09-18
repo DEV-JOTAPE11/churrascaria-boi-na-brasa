@@ -85,6 +85,8 @@ export interface Dish {
   height: number;
   /** tamanho relativo do prato no palco */
   scale: number;
+  /** inclinação em graus; negativo joga a ponta do espeto para a direita */
+  rot?: number;
   /** fundo do palco e brilho da brasa */
   bg: string;
   glow: string;
@@ -97,10 +99,11 @@ export const DISHES: Dish[] = [
     word: "Picanha",
     name: "Picanha na brasa",
     detail: "Selada no fogo, fatiada na hora",
-    image: "/images/hero/picanha.webp",
-    width: 1100,
-    height: 1086,
+    image: "/images/hero/espeto-picanha.webp",
+    width: 405,
+    height: 1436,
     scale: 1,
+    rot: -40,
     bg: "#2a0f09",
     glow: "#ff5a1f",
     sprites: [

@@ -123,7 +123,7 @@ function Dish({
           custom={dir}
           variants={{
             enter: (d: number) => ({ x: `${d * 90}vw`, rotate: d * 70, scale: 0.6 }),
-            center: { x: "0vw", rotate: 0, scale: dish.scale },
+            center: { x: "0vw", rotate: dish.rot ?? 0, scale: dish.scale },
             exit: (d: number) => ({ x: `${d * -90}vw`, rotate: d * -70, scale: 0.6 }),
           }}
           initial="enter"
