@@ -329,13 +329,25 @@ export const REVIEWS = [
 
 /* --------------------------------- galeria ------------------------------- */
 
-export const GALLERY = [
+export interface Shot {
+  src: string;
+  alt: string;
+  w: number;
+  h: number;
+  caption: string;
+  /** enquadramento do recorte no card (object-position); padrão é o centro */
+  pos?: string;
+  /** foto horizontal: no mobile o card vira 16/9 em vez de 4/5 */
+  flat?: boolean;
+}
+
+export const GALLERY: Shot[] = [
   { src: "/images/casa/equipe-sorriso.webp", alt: "Atendente sorrindo no salão", w: 1080, h: 1350, caption: "Atendimento com sorriso" },
-  { src: "/images/casa/salao-cliente.webp", alt: "Salão com telhado de madeira e mesas", w: 640, h: 523, caption: "Nosso salão" },
-  { src: "/images/fotos/picanha-sal-grosso.webp", alt: "Picanha com sal grosso indo para a brasa", w: 739, h: 1313, caption: "Carnes selecionadas" },
-  { src: "/images/casa/equipe-reconhecimento.webp", alt: "Equipe da Boi na Brasa reunida", w: 1080, h: 703, caption: "Nossa equipe" },
+  { src: "/images/casa/salao-mesas.webp", alt: "Salão da churrascaria com telhado de madeira e mesas postas", w: 900, h: 1600, caption: "Nosso salão", pos: "50% 32%" },
+  { src: "/images/casa/carnes-na-brasa.webp", alt: "Peça de picanha assando no espeto sobre a brasa", w: 739, h: 1315, caption: "Carnes selecionadas" },
+  { src: "/images/casa/nossa-equipe.webp", alt: "Equipe da Boi na Brasa reunida no salão", w: 445, h: 237, caption: "Nossa equipe", flat: true },
   { src: "/images/fotos/feijao-tropeiro.webp", alt: "Feijão tropeiro servido no buffet", w: 900, h: 1600, caption: "Tropeiro todo dia" },
-  { src: "/images/casa/familia.webp", alt: "Família reunida na Boi na Brasa", w: 1080, h: 567, caption: "Mesa cheia é mesa feliz" },
+  { src: "/images/casa/familia-mesa.webp", alt: "Família almoçando junto na Boi na Brasa", w: 860, h: 423, caption: "Mesa cheia é mesa feliz", pos: "50% 40%", flat: true },
 ];
 
 /* --------------------------------- dúvidas ------------------------------- */

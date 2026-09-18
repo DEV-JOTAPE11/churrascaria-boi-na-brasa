@@ -25,8 +25,14 @@ export default function Gallery() {
 
       <ul className="gallery__track">
         {GALLERY.map((g, i) => (
-          <Reveal as="li" key={g.src} className={`shot shot--${i + 1}`} delay={i * 0.05}>
-            <Image src={g.src} alt={g.alt} fill sizes="(max-width: 900px) 80vw, 33vw" />
+          <Reveal as="li" key={g.src} className={`shot shot--${i + 1}${g.flat ? " shot--flat" : ""}`} delay={i * 0.05}>
+            <Image
+              src={g.src}
+              alt={g.alt}
+              fill
+              sizes="(max-width: 900px) 80vw, 33vw"
+              style={g.pos ? { objectPosition: g.pos } : undefined}
+            />
             <span className="shot__cap">{g.caption}</span>
           </Reveal>
         ))}
