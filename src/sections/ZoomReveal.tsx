@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import Image from "next/image";
 import { useRef } from "react";
 import { WhatsIcon } from "@/components/Icons";
 import { whatsapp } from "@/data/site";
@@ -32,7 +31,7 @@ export default function ZoomReveal() {
       <section className="zoom is-static" aria-label="Sabor de verdade, todo dia">
         <div className="zoom__stage">
           <div className="zoom__card">
-            <Image className="zoom__photo" src="/images/fotos/grelha-virando.webp" alt="Carne virando sobre a brasa" fill sizes="100vw" />
+            <Photo />
             <div className="zoom__scrim" style={{ opacity: 0.6 }} />
           </div>
           <Content />
@@ -52,7 +51,7 @@ export default function ZoomReveal() {
 
         <motion.div className="zoom__card" style={{ clipPath }}>
           <motion.div className="zoom__photoWrap" style={{ scale: photoScale }}>
-            <Image className="zoom__photo" src="/images/fotos/grelha-virando.webp" alt="Carne virando sobre a brasa" fill sizes="100vw" />
+            <Photo />
           </motion.div>
           <motion.div className="zoom__scrim" style={{ opacity: scrim }} />
         </motion.div>
@@ -62,6 +61,31 @@ export default function ZoomReveal() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+/**
+ * Duas versões da mesma foto: o corte largo nas telas deitadas (pc, notebook e
+ * tablet na horizontal) e o corte em pé nas de retrato (celular e tablet em pé).
+ * É <picture> e não next/image porque só ele troca o arquivo por media query —
+ * o navegador baixa apenas o que a tela pede.
+ */
+function Photo() {
+  return (
+    <picture>
+      <source media="(min-aspect-ratio: 1 / 1)" srcSet="/images/fotos/picanha-brasa-desktop.webp" width={1672} height={941} />
+      <img
+        className="zoom__photo"
+        src="/images/fotos/picanha-brasa-mobile.webp"
+        alt="Espetos de picanha com sal grosso assando sobre a brasa"
+        width={941}
+        height={1672}
+        /* sem lazy: a foto é o fundo da seção e o navegador não a carregava a
+           tempo dentro do card em clip-path, deixando a tela preta na subida */
+        fetchPriority="low"
+        decoding="async"
+      />
+    </picture>
   );
 }
 
